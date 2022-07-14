@@ -38,6 +38,8 @@
       
     
     
+      <link rel="stylesheet" href="../../stylesheets/local.css">
+    
     <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -49,12 +51,16 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -101,6 +107,28 @@
         </div>
       </div>
     </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+            </label>
+          
+        
+      </form>
     
     
     
@@ -513,33 +541,33 @@
 <h2 id="requirement">Requirement</h2>
 <p>Universal runtime is required before installing Windows Terminal.
 Once runtime installed, you can discard installation package from disk.</p>
-<pre><code class="language-dosbatch">▶Powershell -Command Invoke-WebRequest^
- -Uri &quot;https://aka.ms/Microsoft.VCLibs.x64.14.00.Desktop.appx&quot;^
- -OutFile Microsoft.VCLibs.x64.14.00.Desktop.appx
-▶Powershell -Command Add-AppxPackage -Path &quot;Microsoft.VCLibs.x64.14.00.Desktop.appx&quot;
-▶DEL Microsoft.VCLibs.x64.14.00.Desktop.appx
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>▶Powershell -Command Invoke-WebRequest<span class="se">^</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="se"> </span>-Uri <span class="s2">&quot;https://aka.ms/Microsoft.VCLibs.x64.14.00.Desktop.appx&quot;</span><span class="se">^</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="se"> </span>-OutFile Microsoft.VCLibs.x64.14.00.Desktop.appx
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>▶Powershell -Command Add-AppxPackage -Path <span class="s2">&quot;Microsoft.VCLibs.x64.14.00.Desktop.appx&quot;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>▶DEL Microsoft.VCLibs.x64.14.00.Desktop.appx
+</code></pre></div>
 <h2 id="download">Download</h2>
 <p>Download directly using PowerShell:</p>
-<pre><code class="language-dosbatch">▶Powershell -Command Invoke-WebRequest^
- -Uri &quot;https://github.com/microsoft/terminal/releases/download/v1.13.11431.0/Microsoft.WindowsTerminal_Win10_1.13.11431.0_8wekyb3d8bbwe.msixbundle&quot;^
- -OutFile Microsoft.WindowsTerminal_Win10_1.13.11431.0_8wekyb3d8bbwe.msixbundle
-▶PowerShell -Command &quot;(Get-FileHash Microsoft.WindowsTerminal_Win10_1.13.11431.0_8wekyb3d8bbwe.msixbundle -Algo SHA256).Hash&quot;
-97CE893C37A3063A7B45BC859BB357DF730992C87F614E45040D63F5CB2B80FE
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>▶Powershell -Command Invoke-WebRequest<span class="se">^</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="se"> </span>-Uri <span class="s2">&quot;https://github.com/microsoft/terminal/releases/download/v1.13.11431.0/Microsoft.WindowsTerminal_Win10_1.13.11431.0_8wekyb3d8bbwe.msixbundle&quot;</span><span class="se">^</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="se"> </span>-OutFile Microsoft.WindowsTerminal_Win10_1.13.11431.0_8wekyb3d8bbwe.msixbundle
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>▶PowerShell -Command <span class="s2">&quot;(Get-FileHash Microsoft.WindowsTerminal_Win10_1.13.11431.0_8wekyb3d8bbwe.msixbundle -Algo SHA256).Hash&quot;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>97CE893C37A3063A7B45BC859BB357DF730992C87F614E45040D63F5CB2B80FE
+</code></pre></div>
 <h2 id="install-windows-terminal">Install Windows Terminal</h2>
 <p>Run inside a vanilla <code>CMD.EXE</code> or PowerShell instance.</p>
 <p>Install:</p>
-<pre><code class="language-dosbatch">▶Powershell -Command Add-AppxPackage -Path &quot;Microsoft.WindowsTerminal_Win10_1.13.11431.0_8wekyb3d8bbwe.msixbundle&quot;
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>▶Powershell -Command Add-AppxPackage -Path <span class="s2">&quot;Microsoft.WindowsTerminal_Win10_1.13.11431.0_8wekyb3d8bbwe.msixbundle&quot;</span>
+</code></pre></div>
 <h2 id="remove-windows-terminal">Remove Windows Terminal</h2>
 <p>Remove:</p>
-<pre><code class="language-dosbatch">▶Powershell -Command Remove-AppxPackage -Package &quot;Microsoft.WindowsTerminal_Win10_1.13.11431.0_8wekyb3d8bbwe&quot;
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>▶Powershell -Command Remove-AppxPackage -Package <span class="s2">&quot;Microsoft.WindowsTerminal_Win10_1.13.11431.0_8wekyb3d8bbwe&quot;</span>
+</code></pre></div>
 <h2 id="more-information">More information</h2>
 <p>Information:</p>
-<pre><code class="language-dosbatch">▶Powershell -Command Get-AppPackage -name &quot;Microsoft.WindowsTerminal&quot;
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>▶Powershell -Command Get-AppPackage -name <span class="s2">&quot;Microsoft.WindowsTerminal&quot;</span>
+</code></pre></div>
 <p>File <code>settings.json</code> for Windows Terminal can be found in
 <code>%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState</code>.</p>
 <p>Custom icon can be used using URI like <ms-appdata:///roaming/console-blue-32.png>.

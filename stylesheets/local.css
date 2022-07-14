@@ -1,0 +1,60 @@
+@font-face {
+	font-family: "TeX Gyre Heros";
+	font-display: swap;
+	font-weight: 400;
+	src: url("/fonts/texgyreheros-regular.otf") format("otf");
+}
+@font-face {
+	font-family: "TeX Gyre Heros";
+	font-display: swap;
+	font-weight: 400;
+	font-style: italic;
+	src: url("/fonts/texgyreheros-italic.otf") format("otf");
+}
+@font-face {
+	font-family: "TeX Gyre Heros";
+	font-display: swap;
+	font-weight: 700;
+	src: url("/fonts/texgyreheros-bold.otf") format("otf");
+}
+@font-face {
+	font-family: "TeX Gyre Heros";
+	font-display: swap;
+	font-weight: 700;
+	font-style: italic;
+	src: url("/fonts/texgyreheros-bolditalic.otf") format("otf");
+}
+
+@font-face {
+	font-family: 'Iosevka Fixed Web';
+	font-display: swap;
+	font-weight: 400;
+	font-style: normal;
+	src: url('/fonts/iosevka-fixed-regular.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Iosevka Fixed Web';
+	font-display: swap;
+	font-weight: 400;
+	font-style: italic;
+	src: url('/fonts/iosevka-fixed-italic.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Iosevka Fixed Web';
+	font-display: swap;
+	font-weight: 700;
+	font-style: normal;
+	src: url('/fonts/iosevka-fixed-bold.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Iosevka Fixed Web';
+	font-display: swap;
+	font-weight: 700;
+	font-style: italic;
+	src: url('/fonts/iosevka-fixed-bolditalic.woff2') format('woff2');
+}
+
+:root {
+	--md-text-font: "TeX Gyre Heros";
+	--md-code-font: "Iosevka Fixed Web";
+}

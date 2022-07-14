@@ -38,6 +38,8 @@
       
     
     
+      <link rel="stylesheet" href="../../stylesheets/local.css">
+    
     <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -49,12 +51,16 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -96,6 +102,28 @@
         </div>
       </div>
     </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+            </label>
+          
+        
+      </form>
     
     
     
@@ -400,8 +428,8 @@
 <p>Quickly see discard capability with <code>lsblk -D</code> (DISK-GRAN shall not be zero).</p>
 <p>Install package "<code>sg3-utils</code>"" for <code>sg_readcap</code> and <code>sg_vpd</code> command line tools.
 Install package "<code>util-linux</code>" for "<code>/sbin/blkdiscard -v /dev/sdX</code>" command line tools.</p>
-<p><code>------ 8&lt; ------</code>
-Several USB-to-SATA bridge chips (like VL715, VL716 etc.) and also USB-to-PCIe 
+<p><code>------ 8&lt; ------</code></p>
+<p>Several USB-to-SATA bridge chips (like VL715, VL716 etc.) and also USB-to-PCIe 
 bridge chips (like the JMicron JMS583 <a href="http://www.jmicron.com/PDF/brief/jms583.pdf">http://www.jmicron.com/PDF/brief/jms583.pdf</a> 
 used in external NVMe enclosures like IB-1817M-C31 
 <a href="https://www.raidsonic.de/en/standards/searchresults.php?we_objectID=5666">https://www.raidsonic.de/en/standards/searchresults.php?we_objectID=5666</a>) support 
@@ -410,8 +438,8 @@ TRIM-like commands that can be sent through the USB Attached SCSI driver (named
 <p>But the kernel may not automatically detect this capability, and therefore might 
 not use it. Assuming your block device in question is /dev/sdX, you can find out 
 whether that is the case by using the command</p>
-<pre><code>sg_readcap -l /dev/sdX
-</code></pre>
+<div class="highlight"><pre><span></span><code>sg_readcap -l /dev/sdX
+</code></pre></div>
 <p>If in its output you find a line stating "Logical block provisioning: lbpme=0" then 
 you know that the kernel assumes the device does not support "Logical Block 
 Provisioning Management" because the (LBPME) bit is not set.
@@ -419,45 +447,45 @@ Provisioning Management" because the (LBPME) bit is not set.
 <p>If this is the case, then you should next find out whether the "Vital Product Data" 
 (VPD) page on "Logical Block Provisioning" of your device tells of supported 
 mechanisms for unmapping data. You can do this using the command:</p>
-<pre><code>sg_vpd -a /dev/sdX
-</code></pre>
+<div class="highlight"><pre><span></span><code>sg_vpd -a /dev/sdX
+</code></pre></div>
 <p>Look for lines in the output that look like this:</p>
-<pre><code>Unmap command supported (LBPU): 1
+<div class="highlight"><pre><span></span><code>Unmap command supported (LBPU): 1
 Write same (16) with unmap bit supported (LBPWS): 0
 Write same (10) with unmap bit supported (LBPWS10): 0
-</code></pre>
+</code></pre></div>
 <p>This example would tell you the device supports the "UNMAP" command.</p>
 <p>Have a look at the output of</p>
-<pre><code>cat /sys/block/sdX/device/scsi_disk/*/provisioning_mode
-</code></pre>
+<div class="highlight"><pre><span></span><code>cat /sys/block/sdX/device/scsi_disk/*/provisioning_mode
+</code></pre></div>
 <p>If the kernel did not detect the capability of your device to unmap data, then this 
 will likely return "full". Apart from "full", the kernel SCSI storage driver 
 currently knows the following values for provisioning_mode:</p>
-<pre><code>unmap
+<div class="highlight"><pre><span></span><code>unmap
 writesame_16
 writesame_10
 writesame_zero
 disabled
-</code></pre>
+</code></pre></div>
 <p>For the example above, you could now write "unmap" to "provisioning_mode" to ask 
 the kernel to use that:</p>
-<pre><code>echo "unmap" &gt;/sys/block/sdX/device/scsi_disk/*/provisioning_mode
-</code></pre>
+<div class="highlight"><pre><span></span><code>echo &quot;unmap&quot; &gt;/sys/block/sdX/device/scsi_disk/*/provisioning_mode
+</code></pre></div>
 <p><code>------ &gt;8 ------</code></p>
 <p>Make change persistent with:</p>
 <p>File <code>/etc/udev/rules.d/50-usb-ssd-trim.rules</code>:</p>
-<pre><code># ASMedia Technology Inc. – ASM1051E SATA 6Gb/s bridge, ASM1053E SATA 6Gb/s bridge, ASM1153 SATA 3Gb/s bridge, ASM1153E SATA 6Gb/s bridge
-ACTION=="add|change", ATTRS{idVendor}=="174c", ATTRS{idProduct}=="55aa", SUBSYSTEM=="scsi_disk", ATTR{provisioning_mode}="unmap"
+<div class="highlight"><pre><span></span><code># ASMedia Technology Inc. – ASM1051E SATA 6Gb/s bridge, ASM1053E SATA 6Gb/s bridge, ASM1153 SATA 3Gb/s bridge, ASM1153E SATA 6Gb/s bridge
+ACTION==&quot;add|change&quot;, ATTRS{idVendor}==&quot;174c&quot;, ATTRS{idProduct}==&quot;55aa&quot;, SUBSYSTEM==&quot;scsi_disk&quot;, ATTR{provisioning_mode}=&quot;unmap&quot;
 
 # ASMedia Technology Inc. ASM236X series – NVMe enclosure
-ACTION=="add|change", ATTRS{idVendor}=="174c", ATTRS{idProduct}=="2362", SUBSYSTEM=="scsi_disk", ATTR{provisioning_mode}="unmap"
+ACTION==&quot;add|change&quot;, ATTRS{idVendor}==&quot;174c&quot;, ATTRS{idProduct}==&quot;2362&quot;, SUBSYSTEM==&quot;scsi_disk&quot;, ATTR{provisioning_mode}=&quot;unmap&quot;
 
 # Samsung Electronics Co., Ltd Portable SSD T5
-ACTION=="add|change", ATTRS{idVendor}=="04e8", ATTRS{idProduct}=="61f5", SUBSYSTEM=="scsi_disk", ATTR{provisioning_mode}="unmap"
-</code></pre>
+ACTION==&quot;add|change&quot;, ATTRS{idVendor}==&quot;04e8&quot;, ATTRS{idProduct}==&quot;61f5&quot;, SUBSYSTEM==&quot;scsi_disk&quot;, ATTR{provisioning_mode}=&quot;unmap&quot;
+</code></pre></div>
 <p>Apply new rules:</p>
-<pre><code>sudo udevadm control --reload
-</code></pre>
+<div class="highlight"><pre><span></span><code>sudo udevadm control --reload
+</code></pre></div>
 <p>Unplug/replug device to change device provisioning mode.</p>
 
               
