@@ -6,6 +6,7 @@ Install package "`sg3-utils`"" for `sg_readcap` and `sg_vpd` command line tools.
 Install package "`util-linux`" for "`/sbin/blkdiscard -v /dev/sdX`" command line tools.
 
 `------ 8< ------`
+
 Several USB-to-SATA bridge chips (like VL715, VL716 etc.) and also USB-to-PCIe 
 bridge chips (like the JMicron JMS583 <http://www.jmicron.com/PDF/brief/jms583.pdf> 
 used in external NVMe enclosures like IB-1817M-C31 
@@ -18,7 +19,7 @@ not use it. Assuming your block device in question is /dev/sdX, you can find out
 whether that is the case by using the command
 
     sg_readcap -l /dev/sdX
-    
+
 If in its output you find a line stating "Logical block provisioning: lbpme=0" then 
 you know that the kernel assumes the device does not support "Logical Block 
 Provisioning Management" because the (LBPME) bit is not set.
@@ -29,19 +30,19 @@ If this is the case, then you should next find out whether the "Vital Product Da
 mechanisms for unmapping data. You can do this using the command:
 
     sg_vpd -a /dev/sdX
-    
+
 Look for lines in the output that look like this:
 
     Unmap command supported (LBPU): 1
     Write same (16) with unmap bit supported (LBPWS): 0
     Write same (10) with unmap bit supported (LBPWS10): 0
-    
+
 This example would tell you the device supports the "UNMAP" command.
 
 Have a look at the output of
 
     cat /sys/block/sdX/device/scsi_disk/*/provisioning_mode
-    
+
 If the kernel did not detect the capability of your device to unmap data, then this 
 will likely return "full". Apart from "full", the kernel SCSI storage driver 
 currently knows the following values for provisioning_mode:
@@ -51,7 +52,7 @@ currently knows the following values for provisioning_mode:
     writesame_10
     writesame_zero
     disabled
-    
+
 For the example above, you could now write "unmap" to "provisioning_mode" to ask 
 the kernel to use that:
 
