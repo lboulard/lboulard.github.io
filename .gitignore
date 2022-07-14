@@ -1,0 +1,10 @@
+*~
+*.bak
+*.orig
+*.sw[a-z]
+\#*\#
+
+.venv/
+venv/
+
+site/

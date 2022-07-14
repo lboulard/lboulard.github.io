@@ -1,0 +1,10 @@
+site_name: Laurent Boulard notes
+site_url: https://lboulard.github.io
+docs_dir: notes
+theme:
+  name: material
+plugin:
+  - tags
+
+# mkdocs gh-deploy
+remote_branch: main
