@@ -3,8 +3,8 @@ site_url: https://lboulard.github.io
 docs_dir: notes
 theme:
   name: material
-plugin:
+plugins:
   - tags
 
 # mkdocs gh-deploy
-remote_branch: main
+remote_branch: master
