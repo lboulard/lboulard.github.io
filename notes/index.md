@@ -6,6 +6,7 @@
 
 ## Windows
 
+- [Fancy Clink configuration](windows/clink/): Clink brings bash command line ease of work to `cmd.exe`
 - [Hyper-V](windows/Hyper-V/)
 - [PowerShell](windows/PowerShell/)
 - [WSL 2](windows/WSL 2/)
