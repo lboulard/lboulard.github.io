@@ -6,6 +6,7 @@
 
 ## Windows
 
+- [Fancy Clink configuration](windows/clink/): Clink bring bash command line ease of work to `cmd.exe`
 - [Hyper-V](windows/Hyper-V/)
 - [PowerShell](windows/PowerShell/)
 - [WSL 2](windows/WSL 2/)
@@ -13,4 +14,4 @@
 
 ## Tools
 
-- [JetBrains IDE customization](tools/JetBrains/)
+- [JetBrains IDE help](tools/JetBrains/)

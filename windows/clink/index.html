@@ -1,0 +1,1023 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://lboulard.github.io/windows/clink/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>Fancy Clink configuration - Laurent Boulard notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/local.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fancy-clink-configuration" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Laurent Boulard notes" class="md-header__button md-logo" aria-label="Laurent Boulard notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Laurent Boulard notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fancy Clink configuration
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Laurent Boulard notes" class="md-nav__button md-logo" aria-label="Laurent Boulard notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Laurent Boulard notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Crocker%20rule/" class="md-nav__link">
+        Crocker rule
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Linux" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/Enable%20UNMAP%20for%20an%20USB%20storage/" class="md-nav__link">
+        Enable UNMAP for an USB storage
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tools" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/JetBrains/" class="md-nav__link">
+        JetBrains
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Windows
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Windows" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Windows
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hyper-V/" class="md-nav__link">
+        Hyper V
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PowerShell/" class="md-nav__link">
+        PowerShell
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WSL%202/" class="md-nav__link">
+        WSL 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Fancy Clink configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Fancy Clink configuration
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#programs-installation-folder" class="md-nav__link">
+    Programs installation folder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-tools-installation" class="md-nav__link">
+    External tools installation
+  </a>
+  
+    <nav class="md-nav" aria-label="External tools installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fuzzy-finder-fzf" class="md-nav__link">
+    Fuzzy finder (fzf)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-finder-fd" class="md-nav__link">
+    File finder (fd)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    Environment variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-clink-will-be-run" class="md-nav__link">
+    How Clink will be run
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-layout" class="md-nav__link">
+    Installation layout
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clink-installation" class="md-nav__link">
+    Clink installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clink-customization" class="md-nav__link">
+    Clink customization
+  </a>
+  
+    <nav class="md-nav" aria-label="Clink customization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extensions-in-use" class="md-nav__link">
+    Extensions in use
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-setup" class="md-nav__link">
+    Quick setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clink-fzf-plugin-configuration" class="md-nav__link">
+    Clink fzf plugin configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clink-flex-prompt-plugin-configuration" class="md-nav__link">
+    Clink flex prompt plugin configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-clink" class="md-nav__link">
+    Update clink
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wt/" class="md-nav__link">
+        Install and configure Windows Terminal
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#programs-installation-folder" class="md-nav__link">
+    Programs installation folder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-tools-installation" class="md-nav__link">
+    External tools installation
+  </a>
+  
+    <nav class="md-nav" aria-label="External tools installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fuzzy-finder-fzf" class="md-nav__link">
+    Fuzzy finder (fzf)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-finder-fd" class="md-nav__link">
+    File finder (fd)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    Environment variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-clink-will-be-run" class="md-nav__link">
+    How Clink will be run
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-layout" class="md-nav__link">
+    Installation layout
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clink-installation" class="md-nav__link">
+    Clink installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clink-customization" class="md-nav__link">
+    Clink customization
+  </a>
+  
+    <nav class="md-nav" aria-label="Clink customization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extensions-in-use" class="md-nav__link">
+    Extensions in use
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-setup" class="md-nav__link">
+    Quick setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clink-fzf-plugin-configuration" class="md-nav__link">
+    Clink fzf plugin configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clink-flex-prompt-plugin-configuration" class="md-nav__link">
+    Clink flex prompt plugin configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-clink" class="md-nav__link">
+    Update clink
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+  
+
+
+
+<h1 id="fancy-clink-configuration">Fancy Clink configuration</h1>
+<p>Clink try to bring Bash's powerful command line editing in <code>cmd.exe</code> of Windows.</p>
+<ul>
+<li>Clink homepage: <a href="https://chrisant996.github.io/clink/">https://chrisant996.github.io/clink/</a></li>
+<li>Clink documentation: <a href="https://chrisant996.github.io/clink/clink.html">https://chrisant996.github.io/clink/clink.html</a></li>
+</ul>
+<p>This document describes installation and customization based on popular script found in Clink
+documentation:</p>
+<ul>
+<li>Popular scripts: <a href="https://chrisant996.github.io/clink/clink.html#popular-scripts">https://chrisant996.github.io/clink/clink.html#popular-scripts</a></li>
+</ul>
+<p>When combined with <a href="../wt">Microsoft Windows Teminal</a>, you can obtain a modern
+look for old, venerable and clumsy <code>cmd.exe</code>.</p>
+<p><a href="../wt"><img alt="Alt text" src="/images/WT_Clink.png" /></a></p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>In order to use Clink extensions, external tools are required, and, USER
+environment variables shall be modified to find those tools.</p>
+<p>Project pages for installed tools:</p>
+<ul>
+<li>Fuzzy Finder (<code>fzf</code>): <a href="https://github.com/junegunn/fzf">https://github.com/junegunn/fzf</a></li>
+<li>File finder (<code>fd</code>): <a href="https://github.com/sharkdp/fd">https://github.com/sharkdp/fd</a></li>
+</ul>
+<h3 id="programs-installation-folder">Programs installation folder</h3>
+<p>Scripts and command line use an environment variables <code>LBPROGRAMS</code> to reference
+a folder to store user installation of tools and programs.</p>
+<p>To define system wide <code>LBPROGRAMS</code> variable, use <code>SETX</code> in <code>cmd.exe</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>SETX LBPROGRAMS <span class="s2">&quot;C:\lb\Programs&quot;</span>
+</code></pre></div>
+<h3 id="external-tools-installation">External tools installation</h3>
+<h4 id="fuzzy-finder-fzf">Fuzzy finder (<code>fzf</code>)</h4>
+<p>Quite handy tools to find a file or folder (or even a element in user data).</p>
+<p>Download
+<a href="https://github.com/junegunn/fzf/releases/download/0.30.0/fzf-0.30.0-windows_amd64.zip">fzf-0.30.0-windows_amd64.zip</a>.
+Then, extract <code>fzf.exe</code> to <code>%LBPROGRAMS%\bin</code> folder using PowerShell:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>PowerShell -NoProfile -Command <span class="s2">&quot;Expand-Archive $Env:LBPROGRAMS\bin -LiteralPath fzf-0.30.0-windows_amd64.zip&quot;</span>
+</code></pre></div>
+<h4 id="file-finder-fd">File finder (<code>fd</code>)</h4>
+<p>By default <code>fzf</code> use <code>DIR</code> command from <code>cmd.exe</code> to extract file list. File
+finder <code>fd</code> is much faster on Windows and can be used with <code>fzf</code>.</p>
+<p>Download
+<a href="https://github.com/sharkdp/fd/releases/download/v8.4.0/fd-v8.4.0-x86_64-pc-windows-msvc.zip">fd-v8.4.0-x86_64-pc-windows-msvc.zip</a>.
+Then extract <code>fd.exe</code> (located at <code>fd-v8.4.0-x86_64-pc-windows-msvc\fd.exe</code> in
+archive) to <code>%LBPROGRAMS%\bin\fd.exe</code> location.</p>
+<h3 id="environment-variables">Environment variables</h3>
+<p>Create global environment variable to change FZF to use <code>fd</code> for faster file search on Windows.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>SETX FZF_ALT_C_COMMAND <span class="s2">&quot;fd -t d&quot;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>SETX FZF_CTRL_T_COMMAND <span class="s2">&quot;fd -t f&quot;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>SETX FZF_DEFAULT_OPTS <span class="s2">&quot;--layout=reverse --inline-info&quot;</span>
+</code></pre></div>
+<p>Modify <code>PATH</code> using Windows configuration tool for USER environment variables.
+You shall add <code>%LBPROGRAMS%\bin</code> to <code>PATH</code> USER variable.</p>
+<h2 id="how-clink-will-be-run">How Clink will be run</h2>
+<p>Create a file called <code>%LBPROGRAMS%\bin\profile.cmd</code> and run it at each console creation.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">PATH</span> <span class="nv">%LBPROGRAMS%</span>\clink;<span class="nv">%PATH%</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>clink inject -q --profile=<span class="nv">%LBPROGRAMS%</span>\clink_profile
+</code></pre></div>
+<p>Then create a profile in Windows Terminal using this command line as startup:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>cmd.exe /k <span class="s2">&quot;</span><span class="nv">%LBPROGRAMS%</span><span class="s2">\bin\profile.cmd&quot;</span>
+</code></pre></div>
+<p>Before this profile can be used, we need install Clink and all extensions. Then
+configure them to obtain the fancy look of previous screenshot.</p>
+<h2 id="installation-layout">Installation layout</h2>
+<table>
+<thead>
+<tr>
+<th>Location</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>%LBPROGRAMS%\clink</code></td>
+<td>Junction to latest clink installation</td>
+</tr>
+<tr>
+<td><code>%LBPROGRAMS%\clink.1.3.36</code></td>
+<td>Clink installation</td>
+</tr>
+<tr>
+<td><code>%LBPROGRAMS%\clink_modules</code></td>
+<td>Clink extensions</td>
+</tr>
+<tr>
+<td><code>%LBPROGRAMS%\clink_profile</code></td>
+<td>Configuration files</td>
+</tr>
+</tbody>
+</table>
+<p><code>%LBPROGRAMS%\clink</code> is file system junction to <code>%LBPROGRAMS%\clink.1.3.36</code>.
+It is easier to update Clink to latest version by changing junction that
+editing script files.</p>
+<h2 id="clink-installation">Clink installation</h2>
+<p>Download
+<a href="https://github.com/chrisant996/clink/releases/download/v1.3.36/clink.1.3.36.32d0bc.zip">clink.1.3.36.32d0bc.zip</a>.
+Then, extract to <code>%LBPROGRAMS%\clink.1.3.36</code> folder using PowerShell:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>PowerShell -NoProfile -Command <span class="s2">&quot;Expand-Archive $Env:LBPROGRAMS\clink.1.3.36 -LiteralPath clink.1.3.36.32d0bc.zip&quot;</span>
+</code></pre></div>
+<p>Finally, use file system junction to link to current installation of Clink.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">MKLINK</span> /J <span class="s2">&quot;</span><span class="nv">%LBPROGRAMS%</span><span class="s2">\clink&quot;</span> <span class="s2">&quot;</span><span class="nv">%LBPROGRAMS%</span><span class="s2">\clink.1.3.36&quot;</span>
+</code></pre></div>
+<blockquote>
+<p>Let's try Clink, it already works.</p>
+</blockquote>
+<p>As firs try of installation, Open <code>cmd.exe</code> from start menu and type
+<code>profile.cmd</code>  — of course, as previously described, you shall have configure
+<code>%LBPROGRAMS%\bin</code> in <code>PATH</code> USER environment variables. You can also try
+previously setup profile <code>Clink</code> in Windows Terminal if installed.</p>
+<p>Do not expect nothing fancy as configuration or extensions installation are
+missing. Clink history between session for <code>cmd.exe</code> is already working.</p>
+<h2 id="clink-customization">Clink customization</h2>
+<blockquote>
+<p>TODO what re modified options ?</p>
+</blockquote>
+<h3 id="extensions-in-use">Extensions in use</h3>
+<ul>
+<li>clink-fzf: <a href="https://github.com/chrisant996/clink-fz">https://github.com/chrisant996/clink-fz</a></li>
+<li>clink-completions: <a href="https://github.com/vladimir-kotikov/clink-completions">https://github.com/vladimir-kotikov/clink-completions</a></li>
+<li>clink-flexprompt: <a href="https://github.com/chrisant996/clink-flex-prompt">https://github.com/chrisant996/clink-flex-prompt</a></li>
+</ul>
+<h3 id="quick-setup">Quick setup</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">MKDIR</span> <span class="s2">&quot;</span><span class="nv">%LBPROGRAMS%</span><span class="s2">\clink_modules&quot;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">CD</span> <span class="s2">&quot;</span><span class="nv">%LBPROGRAMS%</span><span class="s2">\clink_modules&quot;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>git clone https://github.com/vladimir-kotikov/clink-completions.git clink-completions
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>git clone https://github.com/chrisant996/clink-flex-prompt.git clink-flex-prompt
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>git clone https://github.com/chrisant996/clink-fzf.git clink-fzf
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>clink installscripts <span class="s2">&quot;</span><span class="nv">%LBPROGRAMS%</span><span class="s2">\clink_modules\clink-completions&quot;</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>clink installscripts <span class="s2">&quot;</span><span class="nv">%LBPROGRAMS%</span><span class="s2">\clink_modules\clink-flex-prompt&quot;</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>clink installscripts <span class="s2">&quot;</span><span class="nv">%LBPROGRAMS%</span><span class="s2">\clink_modules\clink-fzf&quot;</span>
+</code></pre></div>
+<h3 id="clink-fzf-plugin-configuration">Clink fzf plugin configuration</h3>
+<p>Default keyboard shortcuts of fzf conflict with well used keyboard shortcut
+command line shortcut of inputrc behaviour. So create or augment
+<code>&amp;LBPROGRAMS%\clink_profile\_inputrc</code> with this new keyboard shortcuts.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a># Default key bindings for fzf with Clink.
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>&quot;\S-\C-f&quot;:     &quot;luafunc:fzf_file&quot;       # Ctrl+T lists files recursively; choose one or multiple to insert them.
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>&quot;\C-r&quot;:        &quot;luafunc:fzf_history&quot;    # Ctrl+R lists history entries; choose one to insert it.
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>&quot;\M-c&quot;:        &quot;luafunc:fzf_directory&quot;  # Alt+C lists subdirectories; choose one to &#39;cd /d&#39; to it.
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>&quot;\M-b&quot;:        &quot;luafunc:fzf_bindings&quot;   # Alt+B lists key bindings; choose one to invoke it.
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>&quot;\e[27;5;32~&quot;: &quot;luafunc:fzf_complete&quot;   # Ctrl+Space uses fzf to filter match completions.
+</code></pre></div>
+<h3 id="clink-flex-prompt-plugin-configuration">Clink flex prompt plugin configuration</h3>
+<p>Unfortunately, you have read directly source code of project to find
+configuration of modules. Project is well written but this is a bit cumbersome
+to read source code to find configuration options.</p>
+<p>Create file <code>%LBPROGRAMS%\clink_profile\flexprompt_config.lua</code> with this content:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">flexprompt</span> <span class="o">=</span> <span class="n">flexprompt</span> <span class="ow">or</span> <span class="p">{}</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">flexprompt</span><span class="p">.</span><span class="n">settings</span> <span class="o">=</span> <span class="n">flexprompt</span><span class="p">.</span><span class="n">settings</span> <span class="ow">or</span> <span class="p">{}</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">flexprompt</span><span class="p">.</span><span class="n">settings</span><span class="p">.</span><span class="n">tails</span> <span class="o">=</span> <span class="s2">&quot;flat&quot;</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="n">flexprompt</span><span class="p">.</span><span class="n">settings</span><span class="p">.</span><span class="n">style</span> <span class="o">=</span> <span class="s2">&quot;rainbow&quot;</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="n">flexprompt</span><span class="p">.</span><span class="n">settings</span><span class="p">.</span><span class="n">spacing</span> <span class="o">=</span> <span class="s2">&quot;compact&quot;</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="n">flexprompt</span><span class="p">.</span><span class="n">settings</span><span class="p">.</span><span class="n">charset</span> <span class="o">=</span> <span class="s2">&quot;unicode&quot;</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="n">flexprompt</span><span class="p">.</span><span class="n">settings</span><span class="p">.</span><span class="n">connection</span> <span class="o">=</span> <span class="s2">&quot;solid&quot;</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="n">flexprompt</span><span class="p">.</span><span class="n">settings</span><span class="p">.</span><span class="n">left_prompt</span> <span class="o">=</span> <span class="s2">&quot;{battery:breakright}{histlabel}{cwd}{python:always:color=38;5;33,48;5;220}{git}&quot;</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="n">flexprompt</span><span class="p">.</span><span class="n">settings</span><span class="p">.</span><span class="n">right_prompt</span> <span class="o">=</span> <span class="s2">&quot;{overtype}{exit}{duration}{time:format=%a %H:%M}&quot;</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="n">flexprompt</span><span class="p">.</span><span class="n">settings</span><span class="p">.</span><span class="n">symbols</span> <span class="o">=</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="p">{</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>    <span class="n">prompt</span> <span class="o">=</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>    <span class="p">{</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>        <span class="s2">&quot;&gt;&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>        <span class="n">winterminal</span> <span class="o">=</span> <span class="s2">&quot;❯&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>    <span class="p">},</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="p">}</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="n">flexprompt</span><span class="p">.</span><span class="n">settings</span><span class="p">.</span><span class="n">flow</span> <span class="o">=</span> <span class="s2">&quot;concise&quot;</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="n">flexprompt</span><span class="p">.</span><span class="n">settings</span><span class="p">.</span><span class="n">powerline_font</span> <span class="o">=</span> <span class="kc">true</span>
+<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a><span class="n">flexprompt</span><span class="p">.</span><span class="n">settings</span><span class="p">.</span><span class="n">left_frame</span> <span class="o">=</span> <span class="s2">&quot;round&quot;</span>
+<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a><span class="n">flexprompt</span><span class="p">.</span><span class="n">settings</span><span class="p">.</span><span class="n">heads</span> <span class="o">=</span> <span class="s2">&quot;pointed&quot;</span>
+<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a><span class="n">flexprompt</span><span class="p">.</span><span class="n">settings</span><span class="p">.</span><span class="n">frame_color</span> <span class="o">=</span> <span class="s2">&quot;darkest&quot;</span>
+<a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a><span class="n">flexprompt</span><span class="p">.</span><span class="n">settings</span><span class="p">.</span><span class="n">lines</span> <span class="o">=</span> <span class="s2">&quot;two&quot;</span>
+<a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a><span class="n">flexprompt</span><span class="p">.</span><span class="n">settings</span><span class="p">.</span><span class="n">separators</span> <span class="o">=</span> <span class="s2">&quot;pointed&quot;</span>
+<a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a><span class="n">flexprompt</span><span class="p">.</span><span class="n">settings</span><span class="p">.</span><span class="n">right_frame</span> <span class="o">=</span> <span class="s2">&quot;none&quot;</span>
+<a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a><span class="n">flexprompt</span><span class="p">.</span><span class="n">settings</span><span class="p">.</span><span class="n">use_8bit_color</span> <span class="o">=</span> <span class="kc">true</span>
+<a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a>
+<a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a><span class="c1">-- Replaces %HOME% with ~ in the cwd module.</span>
+<a id="__codelineno-9-29" name="__codelineno-9-29" href="#__codelineno-9-29"></a><span class="n">flexprompt</span><span class="p">.</span><span class="n">settings</span><span class="p">.</span><span class="n">use_home_tilde</span> <span class="o">=</span> <span class="kc">true</span>
+<a id="__codelineno-9-30" name="__codelineno-9-30" href="#__codelineno-9-30"></a>
+<a id="__codelineno-9-31" name="__codelineno-9-31" href="#__codelineno-9-31"></a><span class="c1">-- flexprompt does not reference correct environment variable</span>
+<a id="__codelineno-9-32" name="__codelineno-9-32" href="#__codelineno-9-32"></a><span class="n">flexprompt</span><span class="p">.</span><span class="n">python_virtual_env_variable</span> <span class="o">=</span> <span class="s2">&quot;VIRTUAL_ENV_PROMPT&quot;</span>
+</code></pre></div>
+<h2 id="update-clink">Update clink</h2>
+<p>This DOS batch script will install downloaded Clink ZIP archive found project
+home age (<a href="https://chrisant996.github.io/clink/">https://chrisant996.github.io/clink/</a>) or in releases page of GitHub
+project (<a href="https://github.com/chrisant996/clink/releases">https://github.com/chrisant996/clink/releases</a>).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">@</span><span class="k">SETLOCAL</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="p">@</span><span class="k">ECHO</span> OFF
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="k">CD</span> /D <span class="s2">&quot;</span><span class="nv">%~dp0</span><span class="s2">&quot;</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="k">SET</span> <span class="nv">VERSION</span><span class="p">=</span>notfound
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="k">SET</span> <span class="nv">ARCHIVE</span><span class="p">=</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="k">FOR</span> <span class="se">%%</span>f <span class="k">IN</span> <span class="p">(</span><span class="s2">&quot;clink.*.zip&quot;</span><span class="p">)</span> <span class="k">DO</span> <span class="p">(</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>  <span class="k">FOR</span> <span class="k">/F</span> <span class="s2">&quot;tokens=2-4 delims=.&quot;</span> <span class="se">%%</span>i <span class="k">IN</span> <span class="p">(</span><span class="s2">&quot;</span><span class="se">%%</span><span class="s2">f&quot;</span><span class="p">)</span> <span class="k">DO</span> <span class="k">CALL</span> <span class="p">:</span><span class="nl">version</span> <span class="s2">&quot;</span><span class="se">%%</span><span class="s2">i&quot;</span> <span class="s2">&quot;</span><span class="se">%%</span><span class="s2">j&quot;</span> <span class="s2">&quot;</span><span class="se">%%</span><span class="s2">k&quot;</span> <span class="s2">&quot;</span><span class="se">%%</span><span class="s2">f&quot;</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="p">)</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="k">ECHO</span>/VERSION=<span class="nv">%VERSION%</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="k">IF</span> <span class="nv">%VERSION%</span><span class="o">==</span>notfound <span class="k">GOTO</span> <span class="p">:</span><span class="nl">NagUser</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="k">ECHO</span>/ARCHIVE=<span class="nv">%ARCHIVE%</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="k">ECHO</span> ON
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>PowerShell.exe -NoProfile -Command<span class="se">^</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="se"> </span><span class="s2">&quot;Expand-Archive -LiteralPath $env:ARCHIVE -DestinationPath $env:LBPROGRAMS\clink.$env:VERSION -Verbose -Force&quot;</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="k">IF</span> <span class="k">EXIST</span> <span class="s2">&quot;</span><span class="nv">%LBPROGRAMS%</span><span class="s2">\clink&quot;</span> <span class="k">RD</span> <span class="s2">&quot;</span><span class="nv">%LBPROGRAMS%</span><span class="s2">\clink&quot;</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="k">MKLINK</span> /J <span class="s2">&quot;</span><span class="nv">%LBPROGRAMS%</span><span class="s2">\clink&quot;</span> <span class="s2">&quot;</span><span class="nv">%LBPROGRAMS%</span><span class="s2">\clink.</span><span class="nv">%VERSION%</span><span class="s2">&quot;</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="p">@</span><span class="k">ECHO</span> OFF
+<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="p">@</span><span class="k">GOTO</span> <span class="p">:</span><span class="nl">NagUser</span>
+<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a>
+<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="p">:</span><span class="nl">version</span>
+<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="k">SET</span> <span class="s2">&quot;X=000000000</span><span class="nv">%~1</span><span class="s2">&quot;</span>
+<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="k">SET</span> <span class="s2">&quot;Y=000000000</span><span class="nv">%~2</span><span class="s2">&quot;</span>
+<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a><span class="k">SET</span> <span class="s2">&quot;Z=000000000</span><span class="nv">%~3</span><span class="s2">&quot;</span>
+<a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a><span class="k">SET</span> <span class="s2">&quot;__VERSION=</span><span class="nv">%X:~-8%</span><span class="s2">.</span><span class="nv">%Y:~-8%</span><span class="s2">.</span><span class="nv">%Z:~-8%</span><span class="s2">&quot;</span>
+<a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a><span class="k">IF</span> <span class="k">NOT</span> <span class="s2">&quot;</span><span class="nv">%_VERSION%</span><span class="s2">&quot;</span><span class="o">==</span><span class="s2">&quot;&quot;</span> <span class="p">(</span>
+<a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a> <span class="k">IF</span> <span class="s2">&quot;</span><span class="nv">%__VERSION%</span><span class="s2">&quot;</span> <span class="ow">LEQ</span> <span class="s2">&quot;</span><span class="nv">%_VERSION%</span><span class="s2">&quot;</span> <span class="k">GOTO</span> <span class="p">:</span><span class="nl">EOF</span>
+<a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a><span class="p">)</span>
+<a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a><span class="k">SET</span> <span class="s2">&quot;_VERSION=</span><span class="nv">%__VERSION%</span><span class="s2">&quot;</span>
+<a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a><span class="k">SET</span> <span class="s2">&quot;VERSION=</span><span class="nv">%~1</span><span class="s2">.</span><span class="nv">%~2</span><span class="s2">.</span><span class="nv">%~3</span><span class="s2">&quot;</span>
+<a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a><span class="k">SET</span> <span class="s2">&quot;ARCHIVE=</span><span class="nv">%~4</span><span class="s2">&quot;</span>
+<a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a><span class="k">GOTO</span> <span class="p">:</span><span class="nl">EOF</span>
+<a id="__codelineno-10-34" name="__codelineno-10-34" href="#__codelineno-10-34"></a>
+<a id="__codelineno-10-35" name="__codelineno-10-35" href="#__codelineno-10-35"></a><span class="p">:</span><span class="nl">NagUser</span>
+<a id="__codelineno-10-36" name="__codelineno-10-36" href="#__codelineno-10-36"></a><span class="p">:</span><span class="c1">: Pause if not interactive</span>
+<a id="__codelineno-10-37" name="__codelineno-10-37" href="#__codelineno-10-37"></a><span class="k">ECHO</span> <span class="nv">%cmdcmdline%</span> <span class="p">|</span> FIND /i <span class="s2">&quot;</span><span class="nv">%~0</span><span class="s2">&quot;</span> <span class="p">&gt;</span>NUL
+<a id="__codelineno-10-38" name="__codelineno-10-38" href="#__codelineno-10-38"></a><span class="k">IF</span> <span class="k">NOT</span> <span class="k">ERRORLEVEL</span> <span class="mi">1</span> <span class="k">PAUSE</span>
+</code></pre></div>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../WSL%202/" class="md-footer__link md-footer__link--prev" aria-label="Previous: WSL 2" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              WSL 2
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../wt/" class="md-footer__link md-footer__link--next" aria-label="Next: Install and configure Windows Terminal" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Install and configure Windows Terminal
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>
