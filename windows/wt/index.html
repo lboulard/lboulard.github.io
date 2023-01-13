@@ -564,19 +564,19 @@ Once runtime installed, you can discard installation package from disk.</p>
 <h2 id="download">Download</h2>
 <p>Download directly using PowerShell:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>▶Powershell -Command Invoke-WebRequest<span class="se">^</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="se"> </span>-Uri <span class="s2">&quot;https://github.com/microsoft/terminal/releases/download/v1.13.11431.0/Microsoft.WindowsTerminal_Win10_1.13.11431.0_8wekyb3d8bbwe.msixbundle&quot;</span><span class="se">^</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="se"> </span>-OutFile Microsoft.WindowsTerminal_Win10_1.13.11431.0_8wekyb3d8bbwe.msixbundle
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>▶PowerShell -Command <span class="s2">&quot;(Get-FileHash Microsoft.WindowsTerminal_Win10_1.13.11431.0_8wekyb3d8bbwe.msixbundle -Algo SHA256).Hash&quot;</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>97CE893C37A3063A7B45BC859BB357DF730992C87F614E45040D63F5CB2B80FE
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="se"> </span>-Uri <span class="s2">&quot;https://github.com/microsoft/terminal/releases/download/v1.15.3465.0/Microsoft.WindowsTerminal_Win10_1.15.3465.0_8wekyb3d8bbwe.msixbundle&quot;</span><span class="se">^</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="se"> </span>-OutFile Microsoft.WindowsTerminal_Win10_1.15.3465.0_8wekyb3d8bbwe.msixbundle
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>▶PowerShell -Command <span class="s2">&quot;(Get-FileHash Microsoft.WindowsTerminal_Win10_1.15.3465.0_8wekyb3d8bbwe.msixbundle -Algo SHA256).Hash&quot;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>CAFEF84E6C40260C30F9424193736C24337B93F1413008E47964E957EC1361A3
 </code></pre></div>
 <h2 id="install-windows-terminal">Install Windows Terminal</h2>
 <p>Run inside a vanilla <code>CMD.EXE</code> or PowerShell instance.</p>
 <p>Install:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>▶Powershell -Command Add-AppxPackage -Path <span class="s2">&quot;Microsoft.WindowsTerminal_Win10_1.13.11431.0_8wekyb3d8bbwe.msixbundle&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>▶Powershell -Command Add-AppxPackage -Path <span class="s2">&quot;Microsoft.WindowsTerminal_Win10_1.15.3465.0_8wekyb3d8bbwe.msixbundle&quot;</span>
 </code></pre></div>
 <h2 id="remove-windows-terminal">Remove Windows Terminal</h2>
 <p>Remove:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>▶Powershell -Command Remove-AppxPackage -Package <span class="s2">&quot;Microsoft.WindowsTerminal_Win10_1.13.11431.0_8wekyb3d8bbwe&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>▶Powershell -Command Remove-AppxPackage -Package <span class="s2">&quot;Microsoft.WindowsTerminal_Win10_1.15.3465.0_8wekyb3d8bbwe&quot;</span>
 </code></pre></div>
 <h2 id="more-information">More information</h2>
 <p>Information:</p>
