@@ -22,10 +22,10 @@ Download directly using PowerShell:
 
 ```dosbatch
 ▶Powershell -Command Invoke-WebRequest^
- -Uri "https://github.com/microsoft/terminal/releases/download/v1.13.11431.0/Microsoft.WindowsTerminal_Win10_1.13.11431.0_8wekyb3d8bbwe.msixbundle"^
- -OutFile Microsoft.WindowsTerminal_Win10_1.13.11431.0_8wekyb3d8bbwe.msixbundle
-▶PowerShell -Command "(Get-FileHash Microsoft.WindowsTerminal_Win10_1.13.11431.0_8wekyb3d8bbwe.msixbundle -Algo SHA256).Hash"
-97CE893C37A3063A7B45BC859BB357DF730992C87F614E45040D63F5CB2B80FE
+ -Uri "https://github.com/microsoft/terminal/releases/download/v1.15.3465.0/Microsoft.WindowsTerminal_Win10_1.15.3465.0_8wekyb3d8bbwe.msixbundle"^
+ -OutFile Microsoft.WindowsTerminal_Win10_1.15.3465.0_8wekyb3d8bbwe.msixbundle
+▶PowerShell -Command "(Get-FileHash Microsoft.WindowsTerminal_Win10_1.15.3465.0_8wekyb3d8bbwe.msixbundle -Algo SHA256).Hash"
+CAFEF84E6C40260C30F9424193736C24337B93F1413008E47964E957EC1361A3
 ```
 
 ## Install Windows Terminal
@@ -35,7 +35,7 @@ Run inside a vanilla `CMD.EXE` or PowerShell instance.
 Install:
 
 ```dosbatch
-▶Powershell -Command Add-AppxPackage -Path "Microsoft.WindowsTerminal_Win10_1.13.11431.0_8wekyb3d8bbwe.msixbundle"
+▶Powershell -Command Add-AppxPackage -Path "Microsoft.WindowsTerminal_Win10_1.15.3465.0_8wekyb3d8bbwe.msixbundle"
 ```
 
 ## Remove Windows Terminal
@@ -43,7 +43,7 @@ Install:
 Remove:
 
 ```dosbatch
-▶Powershell -Command Remove-AppxPackage -Package "Microsoft.WindowsTerminal_Win10_1.13.11431.0_8wekyb3d8bbwe"
+▶Powershell -Command Remove-AppxPackage -Package "Microsoft.WindowsTerminal_Win10_1.15.3465.0_8wekyb3d8bbwe"
 ```
 
 ## More information
