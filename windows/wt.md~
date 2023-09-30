@@ -25,7 +25,7 @@ Download directly using PowerShell:
  -Uri "https://github.com/microsoft/terminal/releases/download/v1.16.10261.0/Microsoft.WindowsTerminal_Win10_1.16.10261.0_8wekyb3d8bbwe.msixbundle"^
  -OutFile Microsoft.WindowsTerminal_Win10_1.16.10261.0_8wekyb3d8bbwe.msixbundle
 ▶PowerShell -Command "(Get-FileHash Microsoft.WindowsTerminal_Win10_1.16.10261.0_8wekyb3d8bbwe.msixbundle -Algo SHA256).Hash"
-229ABC77AE04FC47037F1050C6971E967C840B368CFB92468A2E0EAA78245501
+BA6FC6854E713094B4009CF2021E8B4887CFF737AB4B9C4F9390462DD2708298
 ```
 
 ## Install Windows Terminal
