@@ -10,10 +10,10 @@ documentation:
 
 - Popular scripts: <https://chrisant996.github.io/clink/clink.html#popular-scripts>
 
-When combined with [Microsoft Windows Teminal](../wt), you can obtain a modern
+When combined with [Microsoft Windows Teminal](wt.md), you can obtain a modern
 look for old, venerable and clumsy `cmd.exe`.
 
-[![Alt text](/images/WT_Clink.png)](../wt)
+[![Alt text](../images/WT_Clink.png)](wt.md)
 
 ## Prerequisites
 
